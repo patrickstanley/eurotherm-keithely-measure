@@ -4,12 +4,12 @@ This work is the continuation and development of programs previously written by 
 
 ## Hardware and other libraries
 Temperature measurements are taken directly from a Eurotherm 2408 controller with optional serial communications module.
-A driver package for all 2400 series Eurotherm controllers is available form the NI website.
-Serial communications again occur by VISA and require the NI VISA drivers.
+A [driver package](http://sine.ni.com/apps/utf8/niid_web_display.download_page?p_id_guid=E3B19B3E971F659CE034080020E74861) for all 2400 series Eurotherm controllers is available form the NI website.
+Serial communications again occur by VISA and require the [NI VISA drivers](https://www.ni.com/nisearch/app/main/p/bot/no/ap/tech/lang/en/pg/1/sn/catnav:du,n8:3.25.123.1640,ssnav:ndr/).
 
 p<sub>O<sub>2</sub></sub> was calculated from voltage measurements taken of a YSZ sensor by a Keithley 2000 digital multimeter.
-Communications were established with the Keithley via GPIB (IEEE-488) and thus require the NI-488 driver from NI.
-Additionally, drivers for the Keithley 2000 are available online from NI and are required for the VI.
+Communications were established with the Keithley via GPIB (IEEE-488) and thus require the [NI-488 driver from NI](http://www.ni.com/nisearch/app/main/p/bot/no/ap/tech/lang/en/pg/1/sn/catnav:du,n8:3.25.123.785,ssnav:ndr/).
+Additionally, [drivers for the Keithley 2000](http://sine.ni.com/apps/utf8/niid_web_display.download_page?p_id_guid=014E6EF883B9743DE0440003BA7CCD71) are available online from NI and are required for the VI.
 
 ## Program Overview
 A copy of the block diagram is given below.
@@ -27,5 +27,8 @@ If any occur, they are passed to the error handler and the program stops.
 The voltage of the specified channel of the Keithley is measured and the log(p<sub>O<sub>2</sub></sub>) is calculated from it.
 These values are then displayed, plotted, saved to the csv file.
 
-![Block Diagram](/Documentation\ Images/Temp_&_pO2_Measurementsd.png)
-![Front Panel](/Documentation\ Images/Temp_&_pO2_Measurementsp.png)
+## Block Diagram
+![Block Diagram](https://github.com/patrickstanley/eurotherm-keithley-measure/raw/master/Documentation%20Images/Temp_%26_pO2_Measurementsd.png)
+
+## Front panel
+![Front Panel](https://github.com/patrickstanley/eurotherm-keithley-measure/raw/master/Documentation%20Images/Temp_%26_pO2_Measurementsp.png)
